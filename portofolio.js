@@ -1,30 +1,55 @@
-import express from 'express'
+// =========================
+// FILE : index.js
+// =========================
+
+import express from 'express';
 
 const app = express();
 
+// mengambil folder public
+app.use(express.static('public'));
+
+// endpoint utama
 app.get('/', (req, res) => {
-    res.send(`
-        <h1>Web Portofolio Reza</h1>
-        <p>Selamat datang di web portofolio saya</p>
-    `);
+    res.sendFile('index.html', { root: './public' });
 });
 
+// endpoint about
 app.get('/about', (req, res) => {
+
     res.json({
-        status: 'ok',
-        message: 'Tentang Saya',
+
+        status: 'success',
+
+        message: 'Data Portofolio Reza',
+
         data: {
+
             nama: 'Reza Ratnasari',
+
             tempat_tanggal_lahir: 'Bukittinggi, 33 Mei 1987',
-            perguruan_tinggi: 'PNP',
+
+            perguruan_tinggi: 'Politeknik Negeri Padang',
+
             jurusan: 'Teknik Elektro',
+
             program_studi: 'D IV Elektronika Industri',
+
             angkatan: '2023',
-            deskripsi: 'Haii aku Reza. Sebelum kuliah aku sekolah di SMA N 1 Talamau. Aku memiliki tinggi semekot (semeter kotor). Orang-orang memanggilku Lii, Cayiii, Andung, Nyiak, Reza, Sariatun dan masih banyak lagi. Apakah teman-teman tau kenapa aku kuliah di jurusan ini? Karena aku dipaksa oleh keluarga untuk mengambil jurusan ini, terutama unii. Karena kebanyakan dari sepupu-sepupu yang lain sudah kuliah di masing-masing jurusan yang ada di PNP. Jadi karena di Elektronika ini belum ada, makanya aku disuruh ambil jurusan ini. Alhamdulillah juga bisa menjalani perkuliahan sampai sekarang. Sekian dulu ya, kalau mau lebih tau banyak hal lagi, silahkan follow IG di bawah.'
+
+            deskripsi:
+                'Haii aku Reza. Sebelum kuliah aku sekolah di SMA N 1 Talamau. Aku memiliki tinggi semekot (semeter kotor). Orang-orang memanggilku Lii, Cayiii, Andung, Nyiak, Reza, Sariatun dan masih banyak lagi.',
+
+            instagram: '@rezaratnasari'
         }
+
     });
+
 });
 
+// menjalankan server
 app.listen(5000, () => {
-    console.info('Aplikasi jalan di http://localhost:5000')
+
+    console.log('Server berjalan di http://localhost:5000');
+
 });

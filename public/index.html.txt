@@ -1,0 +1,251 @@
+<!-- =========================
+FILE : public/index.html
+========================= -->
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Portfolio Reza Ratnasari</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- PARTICLES -->
+  <div class="particles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- BACKGROUND -->
+  <div class="bg-animation">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav>
+
+    <h2 class="logo">REZA</h2>
+
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- HERO -->
+  <header>
+
+    <div class="hero-left">
+
+      <p class="hello">Hallo, saya</p>
+
+      <h1>Reza Ratnasari</h1>
+
+      <h2>Mahasiswi Teknik Elektro</h2>
+
+      <p class="desc">
+        Mahasiswi D IV Elektronika Industri
+        yang tertarik pada bidang teknologi,
+        IoT dan web development.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#projects" class="btn">
+          Lihat Project
+        </a>
+
+        <a href="#contact" class="btn2">
+          Contact
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- FOTO PROFILE -->
+    <div class="hero-right">
+
+      <div class="profile-circle">
+
+        <img
+          src="https://i.pinimg.com/736x/6c/2f/e6/6c2fe6f4fce9a29ecb1a4f2d9c27f0e2.jpg"
+          alt="profile"
+        >
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- ABOUT -->
+    <section id="about" class="card">
+
+      <h2>Tentang Saya</h2>
+
+      <p>
+        Haii aku Reza. Sebelum kuliah aku sekolah di SMA N 1 Talamau.
+        Aku memiliki tinggi semekot (semeter kotor).
+        Orang-orang memanggilku Lii, Cayiii, Andung,
+        Nyiak, Reza, Sariatun dan masih banyak lagi.
+      </p>
+
+      <br>
+
+      <p>
+        Aku kuliah di jurusan Teknik Elektro karena
+        disuruh oleh keluarga, terutama unii.
+        Karena kebanyakan sepupu-sepupu yang lain
+        sudah masuk ke berbagai jurusan di PNP,
+        sedangkan di Elektronika belum ada.
+        Jadi akhirnya aku diminta mengambil jurusan ini.
+      </p>
+
+    </section>
+
+    <!-- DATA DIRI -->
+    <section class="card">
+
+      <h2>Data Diri</h2>
+
+      <div class="info">
+
+        <p><span>Nama Lengkap :</span> Reza Ratnasari</p>
+
+        <p><span>Tempat/Tanggal Lahir :</span> Bukittinggi, 33 Mei 1987</p>
+
+        <p><span>Perguruan Tinggi :</span> Politeknik Negeri Padang</p>
+
+        <p><span>Jurusan :</span> Teknik Elektro</p>
+
+        <p><span>Program Studi :</span> D IV Elektronika Industri</p>
+
+        <p><span>Angkatan :</span> 2023</p>
+
+      </div>
+
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="card">
+
+      <h2>Skills</h2>
+
+      <div class="skills">
+
+        <div class="skill-box">HTML</div>
+        <div class="skill-box">CSS</div>
+        <div class="skill-box">JavaScript</div>
+        <div class="skill-box">Node.js</div>
+        <div class="skill-box">Express.js</div>
+        <div class="skill-box">IoT</div>
+        <div class="skill-box">Arduino</div>
+
+      </div>
+
+    </section>
+
+    <!-- PROJECT -->
+    <section id="projects" class="card">
+
+      <h2>Projects</h2>
+
+      <div class="accordion">
+
+        <div class="accordion-item">
+
+          <button class="accordion-title">
+            Robot Balancing PID
+          </button>
+
+          <div class="accordion-content">
+
+            <p>
+              Robot balancing menggunakan metode PID
+              untuk menjaga keseimbangan otomatis.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+          <button class="accordion-title">
+            Monitoring IoT
+          </button>
+
+          <div class="accordion-content">
+
+            <p>
+              Sistem monitoring sensor berbasis IoT.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card">
+
+      <h2>Contact</h2>
+
+      <p>Email : rezaratnasari@gmail.com</p>
+
+      <p>Instagram : @rezaratnasari</p>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Portfolio Reza Ratnasari
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+
+    const accordion = document.querySelectorAll('.accordion-title');
+
+    accordion.forEach(item => {
+
+      item.addEventListener('click', () => {
+
+        const content = item.nextElementSibling;
+
+        content.classList.toggle('active');
+
+      });
+
+    });
+
+  </script>
+
+</body>
+
+</html>
